@@ -128,15 +128,6 @@ platform :ios do
       targets: ["Loop Widget Extension"]
     )
 
-    gym(
-      export_method: "app-store",
-      scheme: "LoopWorkspace",
-      output_name: "Loop.ipa",
-      configuration: "Release",
-      destination: 'generic/platform=iOS',
-      buildlog_path: 'buildlog'
-    )
-
     copy_artifacts(
       target_path: "artifacts",
       artifacts: ["*.mobileprovision", "*.ipa", "*.dSYM.zip"]
